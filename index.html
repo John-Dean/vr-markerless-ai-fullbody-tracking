@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Template</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<script src="https://cdn.jsdelivr.net/npm/ml-matrix@6.8.0/matrix.umd.min.js"></script>
+		<script src="similarity-transformation.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+
+		<script src="script.js" defer></script>
+
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.1/landmark_grid.css" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.1.1624665424/control_utils_3d.min.js"></script>
+		<style>
+			.square-box {
+				width: 50%;
+				height: 0;
+				padding-top: 50%;
+				position: relative;
+			}
+
+			.landmark-grid-container {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #99999999;
+				color: white;
+			}
+			
+			.container {
+				width: 100%;
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div class="video-feed"></div>
+			<div class="container">
+				<div class='square-box'>
+					<div class="landmark-grid-container">
+					</div>
+				</div>
+				
+				<div class='square-box'>
+					<div class="landmark-grid-container">
+					</div>
+				</div>
+			</div>
+			<div class="status">
+				<div class="connected"></div>
+				<div class="running"></div>
+			</div>
+		</section>
+
+
+	</body>
+</html>
