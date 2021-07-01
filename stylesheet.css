@@ -1,19 +1,21 @@
-* {
-	box-sizing: border-box;	
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
 
 body {
 	display: flex;
-	background-color: rgb(0,0,0);
+	background-color: rgb(0, 0, 0);
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
 }
 
 body section {
 	width: calc(100% - 2rem);
 	max-width: 400px;
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(255, 255, 255, 0.2);
 	position: relative;
 }
 
@@ -22,7 +24,7 @@ body section video {
 }
 
 body section .video-feed {
-	position: relative;	
+	position: relative;
 }
 
 body section .video-feed canvas {
@@ -36,22 +38,92 @@ body section .video-feed canvas {
 .connected:before {
 	content: "Connected: ";
 }
+
 .running:before {
 	content: "Status: ";
 }
 
-.status {
+.p2p {
+	text-align: center;	
+	width: 100%;
+}
+.p2p:before {
+	content: "Peer to Peer Connected: ";
+}
+
+.info {
 	display: flex;
-	flex-direction: column;
-	padding: 1rem;	
-	color: rgb(255,255,255,0.6);
+	flex-direction: row;
+	padding: 1rem;
+	color: rgb(255, 255, 255, 0.6);
+	justify-content: space-between;
 }
 
-.status >div {
+.status>div {
 	margin-bottom: 1rem;
-		
 }
 
-.status >*:last-child {
-	margin-bottom: 0;	
+.status>*:last-child {
+	margin-bottom: 0;
+}
+
+.square-box {
+	width: 50%;
+	height: 0;
+	padding-top: 50%;
+	position: relative;
+}
+
+.landmark-grid-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #99999999;
+	color: white;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.qr-code img {
+	width: calc(100% - 2rem);
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+
+.qr-code {
+	width: 100%;
+	background-color: white;	
+	height: 0;
+	padding-top: 100%;
+	position: relative;
+}
+
+
+.button {
+  padding: 0.25rem 2rem;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+body:not([data-primary="true"]) .primary {
+	display: none;
+}
+
+body:not([data-primary="false"]) .secondary {
+	display: none;
 }
